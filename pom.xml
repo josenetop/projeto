@@ -8,13 +8,48 @@
     <artifactId>projetoteste</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
+
     <properties>
-        <java.version>1.8</java.version>
-        <sonar.projectKey>josenetop_papw</sonar.projectKey>
+        <sonar.projectKey>josenetop_projeto</sonar.projectKey>
         <sonar.organization>josenetop</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io/</sonar.host.url>
-        <sonar.login>c615d9321b51c1dda88e83e4e234d495d7c65574</sonar.login>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.login>48d26751be1e142b9e950b756ea844e735e60a64</sonar.login>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
